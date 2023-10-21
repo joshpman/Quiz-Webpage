@@ -1,6 +1,8 @@
-const Question = ({content})=>{
+import {useState} from 'react';
+const Question = ({content, buttonHandler})=>{
+    
     return(
-        <button className="option">{decodeHTMLEntities(content)}</button>
+        <button onClick={buttonHandler} className="option">{decodeHTMLEntities(content)}</button>
     )
 }
 function decodeHTMLEntities(text) {
