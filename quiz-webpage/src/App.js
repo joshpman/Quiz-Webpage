@@ -42,7 +42,6 @@ const App = ()=>{
                 document.getElementById("questionWrapper").style.display = "flex";                       
             }
         }else if(questionNumber===11){
-            console.log(questionNumber);
             setQuestion("Congrats!");
             document.getElementsByClassName("nextButton")[0].innerHTML = "Restart Quiz";
         }
@@ -89,7 +88,7 @@ const App = ()=>{
             {
                 questionNumber===0?<select name="category" id="categorySelector">
                 <option value="">Select an option below</option>
-                {category.length!==0?category.map((item)=><Categories type={item} />):console.log("Empty")}
+                {category.length!==0?category.map((item)=><Categories type={item} />):undefined}
                 </select>
                 :undefined
             }
