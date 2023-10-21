@@ -125,6 +125,9 @@
     }
 }
 @media(max-width: 500px){
+    #categorySelector option, #categorySelector{
+        font-size: 1rem;
+    }
     .centerBox{
         width: 95vw;
     }
