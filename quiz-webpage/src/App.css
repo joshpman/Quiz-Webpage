@@ -33,6 +33,14 @@
     padding-bottom: 2vh;
     margin: 0 5%;
 }
+#categorySelector option{
+    font-size: 2rem;
+}
+#categorySelector{
+    width: 60%;
+    height: 8%;
+    font-size: 2rem;
+}
 .currentQuestion{
     padding: 0vh 0 1vh;
     text-align: center;
@@ -52,6 +60,10 @@
     flex-direction: column;
     justify-content: space-between;
 }
+#startQuiz, .nextButton{
+    font-size: 2rem;
+    font-weight: bold;
+}
 #questionNumber{
     border-top: 2px solid var(--line-color);
     margin:0  5%;
@@ -70,6 +82,7 @@
     border: 2px solid var(--line-color);
     border-radius: 1vmin;
     transition: background-color 300ms linear;
+    font-size: 2rem;
 }
 .option:hover{
     background-color: rgba(117, 117, 117, 0.444);
@@ -91,4 +104,28 @@
  .nextButton:hover, #startQuiz:hover{
     background-color: rgba(117, 117, 117, 0.6);
     cursor: pointer;
+}
+
+@media(max-width: 1800px){
+    #categorySelector option, #categorySelector{
+        font-size: 1.5rem;
+    }
+    .centerBox{
+        width: 60vw;
+    }
+}
+@media(max-width: 700px){
+    #root{
+        align-items: baseline;
+    }
+    .centerBox{
+        margin-top: 5%;
+        width: 90vw;
+        height: 90vh;
+    }
+}
+@media(max-width: 500px){
+    .centerBox{
+        width: 95vw;
+    }
 }
