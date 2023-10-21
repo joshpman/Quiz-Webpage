@@ -38,7 +38,7 @@
 }
 #categorySelector{
     width: 60%;
-    height: 8%;
+    height: auto;
     font-size: 2rem;
 }
 .currentQuestion{
