@@ -45,9 +45,6 @@ const App = ()=>{
             setQuestion("Congrats!");
             document.getElementsByClassName("nextButton")[0].innerHTML = "Restart Quiz";
         }
-    const restartQuiz = ()=>{
-
-    };
     },[questionNumber]);
     const handleButtonClick = (e) =>{
         if(buttonClicked.length===0){
@@ -61,13 +58,12 @@ const App = ()=>{
             e.target.style.backgroundColor = "rgba(117, 117, 117)"
             setButtonClicked(e.target); 
         }
-        
     }
     const [question, setQuestion] = useState(["Pick a category"]);
     return( 
         <div className="centerBox">
             <header id="topHeader">
-                <h1 id="quizLabel">Quiz</h1>
+            <h1 id="quizLabel">Quiz</h1>
             </header>
             <div id="mainContent">
             <h1 className="currentQuestion">
@@ -83,7 +79,6 @@ const App = ()=>{
                 <h1 id="results">{`You scored a ${correct} out of 10`}</h1>
                 </div>:undefined
             }
-            
             </div>
             {
                 questionNumber===0?<select name="category" id="categorySelector">
@@ -92,29 +87,18 @@ const App = ()=>{
                 </select>
                 :undefined
             }
-            
-           
             </div>
-            
             <footer id="footer">
                 {
                     questionNumber===0?<button id="startQuiz" onClick={(e)=>{
                         if(document.getElementById("categorySelector").value>0){
                             const startQuiz = new Promise((resolve, reject)=>{
                                 getQuestions(document.getElementById("categorySelector").value);
-                            });
-                            startQuiz.then(
-                                
-                            ); 
-                        }
-                    }}>
-                    Confirm
-                    
+                            });               
+                            }}}>
+                    Confirm  
                     </button>:undefined
-
-                }
-                
-                {
+                }{
                     questionNumber>0?
                     <button  onClick={()=>{
                         let currentSelection = buttonClicked.innerHTML;
@@ -135,9 +119,6 @@ const App = ()=>{
                             document.getElementById("questionWrapper").style.display = "none";
 
                         }
-                        
-                        //console.log(current);
-                        
                     }}  
                     className="nextButton">{"Next Question"}</button>
                     
